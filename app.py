@@ -8,7 +8,7 @@ import random
 min_rows=20
 max_rows=30
 cols=['id', 'name', 'city', 'salary']
-spark=SparkSession.builder.appName('abc').getOrCreate()
+spark=SparkSession.builder.appName('CitySalaryAnalyser').getOrCreate()
 spark.sparkContext.setLogLevel('ERROR')
 data = DataGenerator(random.randint(min_rows, max_rows)).get_data()
 print('Source Data Frame')

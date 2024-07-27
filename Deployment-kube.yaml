@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      source: DataGenerator
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: spark-app
+      labels:
+        source: DataGenerator
+    spec:
+      containers:
+        - name: spark-app
+          image: docker.io/kamakshaprasadnaik/dummy-spark-app:v1.0

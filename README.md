@@ -22,4 +22,4 @@ If you have a spark cluster configured you can clone the repo and run it
     spark-submit app.py 
 
 # Base Image
-It uses jupyter/pyspark-notebook base image which comes configured with everything needed to run the spark jobs. We can try creating a smaller image maybe from python:3.11-slim or apache/spark:\<spark-version>. That could be part of enhancements done for the project. 
+It uses official apache/spark:latest base image which comes configured with everything needed to run the spark jobs. We can try reducing the image size using multistage builds as a part of enhancements. 

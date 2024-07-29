@@ -5,8 +5,8 @@ from DataframeGenerator import DataGenerator
 import random
 
 #create spark session and dataframe
-min_rows=20
-max_rows=30
+min_rows=50
+max_rows=100
 cols=['id', 'name', 'city', 'salary']
 spark=SparkSession.builder.appName('CitySalaryAnalyser').getOrCreate()
 spark.sparkContext.setLogLevel('ERROR')

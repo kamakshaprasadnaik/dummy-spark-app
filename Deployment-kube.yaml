@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
         - name: spark-app
-          image: docker.io/kamakshaprasadnaik/dummy-spark-app:v1.0
+          image: docker.io/kamakshaprasadnaik/dummy-spark-app:v1.1

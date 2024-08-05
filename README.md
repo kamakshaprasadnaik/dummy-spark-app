@@ -23,3 +23,10 @@ If you have a spark cluster configured you can clone the repo and run it
 
 # Base Image
 It uses official apache/spark:latest base image which comes configured with everything needed to run the spark jobs. We can try reducing the image size using multistage builds as a part of enhancements. 
+
+# Running Tests
+Tests can be run in tests folder. I have not implemented a test for the check duplicate method but still somewhere it is hitting the check duplicate as the coverage report is showing 100%. Maybe it is when I return a Data generator object. Need to check 
+
+    pytest --cov=tests . 
+
+Run this the command with tests as working directory to get the test results with coverage. 
